@@ -42,6 +42,16 @@ p {
     margin: 15px 0 20px 0;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: grey;
+}
+
 button {
     background-color: lightgray;
     color: var(--background-color);
@@ -87,6 +97,15 @@ button:hover {
     align-items: center;
     justify-content: center;
     color: var(--text-color);
+}
+
+#header .menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#header .menu_m {
+    display: none;
 }
 
 #header a {
@@ -424,11 +443,64 @@ button:hover {
     width: 40%;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-top: 16px;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer i {
+    font-size: 24px;
+}
+
+footer .row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+footer .row .estore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 34px var(--nav-color);
+    transition: 0.3s ease-in-out;
+    width: fit-content;
+    cursor: pointer;
+}
+
+footer .estore:hover {
+    box-shadow: 0px 0px 54px rgb(99, 99, 99);
+}
+
+
 @media (max-width: 1070px) {
 
 #hero {
     background-image: url(images/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large_2x.jpg);
-    height: 90vh;
+    height: 50vh;
     width: 100%;
     background-size: contain;
     background-position: bottom;
@@ -441,6 +513,14 @@ button:hover {
     padding-top: 80px;
 }
 
+#header .menu {
+    display: none;
+}
+
+#header .menu_m {
+    display: block;
+}
+
 #banner h4, h2 {
     text-shadow: 0px 0px 34px black;
     text-align: center;
@@ -450,6 +530,12 @@ button:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    padding: 0 60px;
+    height: 400px;
+    max-width: 80%;
 }
 
 #banner3 {
@@ -477,9 +563,20 @@ button:hover {
     word-break: break-word;
 }
 
-#newsletter .form {
+#newsletter .newsletter {
     display: flex;
+    flex-direction: column;
 }
 
+#newsletter .form, .newsletter {
+    display: flex;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
 }
 /*

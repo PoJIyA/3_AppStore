@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech2etc Ecommerce Tutorial</title>
+    <title>AppShop</title>
     <link rel="stylesheet" href="styles1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
@@ -24,7 +24,7 @@ body {
     <section id="header">
         <a href="#"><i class="fa-brands fa-apple"></i></a>
 
-        <div>
+        <div class="menu">
             <ul id="navbar">
                 <li> <a class="active" href="index.html">Home</a> </li>
                 <li> <a href="shop.html">Shop</a> </li>
@@ -33,7 +33,12 @@ body {
                 <li> <a href="contact.html">Contact</a> </li>
                 <li> <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a> </li>
             </ul>
+            
         </div>
+        <div class="menu_m">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
     </section>
 
     <section id="hero">
@@ -488,7 +493,7 @@ body {
         </div>
     </section>
 
-    <section id="newsletter" class="section-p1">
+    <section id="newsletter" class="section-p1 section-m1">
         <div class="newsletter">
             <h4>Sign Up For Newsletters</h4>
             <p>Get E-mail updates about latest shop and <span>special offers</span></p>
@@ -498,6 +503,60 @@ body {
             <button>Sign Up</button>
         </div>
     </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="#"><i class="fa-brands fa-apple" id="logo"></i></a>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 123456 Muster str. 78, Berlin, Germany</p>
+            <p><strong>Phone:</strong> +49 123 456 78 90</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Termas and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4> Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <div class="estore">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <p>App Store</p>
+                </div>
+                <div class="estore">
+                    <i class="fa-brands fa-google-play"></i>
+                    <p>Google Play</p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
 
     <script src="script.js"></script>
 </body>
