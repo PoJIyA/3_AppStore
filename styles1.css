@@ -472,6 +472,12 @@ footer i {
     font-size: 24px;
 }
 
+footer .follow i {
+    padding-right: 4px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
 footer .row {
     display: flex;
     flex-direction: row;
@@ -498,9 +504,46 @@ footer .estore:hover {
 
 @media (max-width: 1070px) {
 
+#navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--nav-color);
+    box-shadow: 0 40px 60px var(--background-color);
+    padding: 20px 0 0 10px;
+    transition: 0.3s;
+}
+
+#navbar.active {
+    right: 0px;
+}
+
+#navbar li {
+    margin-bottom: 24px;
+}
+
+#navbar li a {
+    font-size: 24px;
+}
+
+#header .menu_m i {
+    font-size: 24px;
+    padding-left: 24px;
+}
+
+#header .fa-apple {
+    font-size: 30px;
+}
+
 #hero {
     background-image: url(images/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large_2x.jpg);
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background-size: contain;
     background-position: bottom;
@@ -513,12 +556,11 @@ footer .estore:hover {
     padding-top: 80px;
 }
 
-#header .menu {
-    display: none;
-}
 
 #header .menu_m {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 #banner h4, h2 {
@@ -578,5 +620,7 @@ footer {
     flex-wrap: wrap;
     gap: 40px;
     margin: 0 auto;
+}
+
 }
 /*
