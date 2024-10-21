@@ -86,7 +86,6 @@ button:hover {
     background: var(--nav-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
-    position: sticky;
     top: 0;
     left: 0;
     color: var(--text-color);
@@ -132,6 +131,10 @@ button:hover {
     font-weight: 200;
     color: var(--text-color);
     transition: 0.3s ease-in-out;
+}
+
+#header .fa-xmark {
+    display: none;
 }
 
 #navbar li a:hover,
@@ -539,6 +542,10 @@ footer .estore:hover {
 
 #header .fa-apple {
     font-size: 30px;
+}
+
+#header .fa-xmark {
+    display: block;
 }
 
 #hero {
