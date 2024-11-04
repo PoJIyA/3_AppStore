@@ -284,6 +284,10 @@ button:hover {
     font-weight: 700;
 }
 
+#icons_temp {
+    display: none;
+}
+
 .fa-cart-shopping {
     width: 40px;
     height: 40px;

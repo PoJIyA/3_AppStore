@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppShop</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<style>
+
+body {
+    font-family: 'Avenir', sans-serif;
+    background-color: var(--background-color);
+    width: 100%;
+    color: var(--text-color);
+}
+
+</style>
+
+</head>
+<body>
+    <section id="header">
+        <a href="index1.html"><i class="fa-brands fa-apple"></i></a>
+
+        <div class="menu">
+            <ul id="navbar">
+                <li><a href="#" id="close"><i class="fa-solid fa-xmark"></i></a></li>
+                <li> <a href="index1.html">Home</a> </li>
+                <li> <a href="featured.html">Featured</a> </li>
+                <li> <a class="active" href="new.html">New</a> </li>
+                <li> <a href="about.html">About</a> </li>
+                <li> <a href="contact.html">Contact</a> </li>
+                <li> <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a> </li>
+            </ul>
+            
+        </div>
+        <div class="menu_m">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-bars"></i>
+        </div>
+
+    </section>
+
+
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Latest Edition</p>
+
+        <div class="sortContainer">
+            <label for="sortOptions">Sort by:</label>
+            <select id="sortOptions">
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+            </select>
+        </div>
+
+    <div class="containers" id="productContainer">
+
+        <!-- <div class="pro" id="productTemplate">
+            <div class="img_container">
+                <img data-name="img" src="" alt="Product Image">
+            </div>
+            <div class="img_footer">
+                <div class="des">
+                    <span data-name="brand"></span>
+                    <h5 data-name="productName"></h5>
+                    <div class="star" data-name="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 data-name="price"></h4>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    </section>
+<div id="icons_temp">
+    <i class="fa-solid fa-star" id="onStar"></i>
+    <i class="fa-regular fa-star" id="offStar"></i>
+</div>
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>Crazy deals</h4>
+            <h2>Buy 1 Get 1 Free</h2>
+            <span>The best devices are on sale</span>
+            <button>Learn More</button>
+        </div>
+        <div class="banner-box banner-box2">
+            <h4>iPhone 16</h4>
+            <h2>Upcoming Season</h2>
+            <span>The best devices are on sale</span>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Buy 1 Get 1 Free</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box2">
+            <h2>Seasonal Sale</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+        <div class="banner-box banner-box3">
+            <h2>Buy 1 Get 1 Free</h2>
+            <h3>Winter Collection -50% OFF</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newsletter">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="index1.html"><i class="fa-brands fa-apple" id="logo"></i></a>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 123456 Muster str. 78, Berlin, Germany</p>
+            <p><strong>Phone:</strong> +49 123 456 78 90</p>
+            <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <a><i class="fa-brands fa-facebook-f"></i></a>
+                    <a><i class="fa-brands fa-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                    <a><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Termas and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4> Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <div class="estore">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <p>App Store</p>
+                </div>
+                <div class="estore">
+                    <i class="fa-brands fa-google-play"></i>
+                    <p>Google Play</p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+
+    <script src="items3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
