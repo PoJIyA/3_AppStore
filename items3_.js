@@ -2,9 +2,9 @@ let activeStar = document.getElementById('onStar');
 
 let inactiveStar = document.getElementById('offStar');
 
+const cartItems = []; // Массив для хранения товаров в корзине
+
 // NEW Products
-
-
 
 const products = [
     { name: "iPhone 16", price: 100, brand: "Apple", img: "images/iphone/iPhone 16/iPhone 16 - White - Portrait.png", rate: 5 },
@@ -20,6 +20,7 @@ const products = [
 document.addEventListener("DOMContentLoaded", function(event){
     addProducts();
 });
+
 
 // Function to dynamically create and add product cards
 const addProducts = function () {
@@ -102,6 +103,12 @@ const addProducts = function () {
 
       // Add completed card to the main container
       productContainer.appendChild(productCard);
+
+      // Добавляем обработчик для кнопки добавления в корзину
+      cartLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        addToCart(product);
+      });
   });
 };
 
@@ -109,6 +116,8 @@ const addProducts = function () {
 document.addEventListener("DOMContentLoaded", () => {
   addProducts();
 });
+
+
 
 
 // NEW sorting Fuction 
@@ -147,6 +156,51 @@ function sortProducts(criteria) {
 
 
 // Event listener for dropdown change
+document.getElementById("sortOptions").addEventListener("change", (event) => {
+  sortProducts(event.target.value);
+});
+
+
+// Функция добавления товара в корзину
+function addToCart(product) {
+  cartItems.push({
+    name: product.name,
+    price: product.price,
+    brand: product.brand,
+    img: product.img,
+    rate: product.rate
+  });
+
+  displayConfirmation(product.name); // Показываем сообщение подтверждения
+  updateCartDisplay();               // Обновляем содержимое корзины
+}
+
+// Функция отображения содержимого корзины
+function updateCartDisplay() {
+  const cartDisplay = document.querySelector(".modal-cart-content p");
+  if (cartItems.length === 0) {
+    cartDisplay.textContent = "Your cart is empty.";
+  } else {
+    cartDisplay.innerHTML = 
+      "<ul>" + 
+      cartItems.map(item => `<li>${item.name} - ${item.price}€</li>`).join("") + 
+      "</ul>";
+  }
+}
+
+// Функция для показа сообщения о добавлении товара
+function displayConfirmation(productName) {
+  const confirmation = document.createElement("div");
+  confirmation.className = "confirmation-message";
+  confirmation.textContent = `${productName} has been added to the cart.`;
+  document.body.appendChild(confirmation);
+
+  setTimeout(() => {
+    confirmation.remove();
+  }, 3000);
+}
+
+// Слушатель для сортировки
 document.getElementById("sortOptions").addEventListener("change", (event) => {
   sortProducts(event.target.value);
 });

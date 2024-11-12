@@ -76,6 +76,19 @@ button:hover {
     margin: 40px 0;
 }
 
+.sortContainer {
+    padding-bottom: 24px;
+}
+
+.sort {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--nav-color);
+    font-family: "SF Pro", sans-serif;
+    padding: 4px;
+    border-radius: 4px;
+}
+
 /* Header Start */
 
 #header {
@@ -89,6 +102,7 @@ button:hover {
     top: 0;
     left: 0;
     color: var(--text-color);
+    position: sticky;
 }
 
 #navbar {
@@ -405,6 +419,11 @@ button:hover {
     background-image: url(images/Macbook/MacBook\ Air\ 13\ -\ 4th\ Gen\ -\ Midnight.png);
 }
 
+#up {
+    display: flex;
+    justify-content: center;
+}
+
 #newsletter {
     display: flex;
     justify-content: space-between;
@@ -418,8 +437,6 @@ button:hover {
     margin-bottom: 16px;
     height: 20vh;
 }
-
-
 
 #newsletter span {
     color: var(--gold-color);
@@ -508,6 +525,59 @@ footer .estore:hover {
     box-shadow: 0px 0px 54px rgb(99, 99, 99);
 }
 
+bottom {
+    display: flex;
+    justify-content: center;
+}
+
+/* CART */
+
+.modal-cart {
+    background-color: var(--nav-color);
+    width: fit-content;
+    padding: 32px;
+    border-radius: 16px;
+    position: fixed;                /* Фиксированное позиционирование для центрирования */
+  top: 50%;                       /* Центр по вертикали */
+  left: 50%;                      /* Центр по горизонтали */
+  transform: translate(-50%, -50%); /* Смещение на половину размеров для центрирования */
+  display: none;                  /* По умолчанию окно скрыто */
+  z-index: 1000;                  /* Чтобы окно было выше остального контента */
+  width: 80%;                     /* Ширина окна (можно изменить по необходимости) */
+  max-width: 500px;               /* Максимальная ширина */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для выделения */
+  opacity: 0;                     /* Прозрачность для плавного появления */
+  transition: opacity 0.3s ease;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+/* Затемнение фона при открытом модальном окне */
+.modal-cart.show {
+    opacity: 1;                     /* Видимость модального окна */
+  }
+  
+  /* Фон для затемнения */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    display: none;                       /* По умолчанию скрыт */
+    z-index: 999;                        /* Под модальным окном */
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-overlay.show {
+    display: block;                     /* Показать затемнение фона */
+  }
+
 
 @media (max-width: 1070px) {
 
@@ -575,7 +645,12 @@ footer .estore:hover {
 }
 
 #banner h4, h2 {
-    text-shadow: 0px 0px 34px black;
+    text-shadow: 0px 0px 8px black;
+    text-align: center;
+}
+
+#sm-banner h4, h2, span {
+    text-shadow: 0px 0px 8px black;
     text-align: center;
 }
 
@@ -587,8 +662,8 @@ footer .estore:hover {
 
 #sm-banner .banner-box {
     padding: 0 60px;
-    height: 400px;
-    max-width: 80%;
+    height: 50vh;
+    width: 100%;
 }
 
 #banner3 {
@@ -601,7 +676,7 @@ footer .estore:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     background-image: url(images/visax-r9DV-EdDmWM-unsplash.jpg);
     background-repeat: no-repeat;
@@ -632,6 +707,68 @@ footer {
     gap: 40px;
     margin: 0 auto;
 }
+
+}
+
+@media (max-width: 477px) {
+    #header {
+        padding: 16px 30px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 80px;
+        height: 65vh;
+        background-size: 140%;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .section-p1 {
+        padding: 40px 20px;
+    }
+
+
+    #feature .fe-box {
+        text-align: center;
+        width: 155px;
+        box-shadow: 0px 0px 34px var(--nav-color);
+        border-radius: 16px;
+        margin: 0;
+        padding: 32px 16px;
+        transition: 0.3s ease-in-out;
+        color: gray;
+    }
+
+    #sm-banner .banner-box {
+        height: 40vh;
+        min-width: 100%;
+
+    }
+
+    #newsletter {
+        height: fit-content;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0 auto;;
+    }
 
 }
 /*
