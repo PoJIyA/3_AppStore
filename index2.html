@@ -32,7 +32,10 @@ body {
                 <li> <a href="new3.html">New</a> </li>
                 <li> <a href="about.html">About</a> </li>
                 <li> <a href="contact.html">Contact</a> </li>
-                <li> <a id="cartLink"><i class="fa-solid fa-bag-shopping"></i></a> </li>
+                <li> <a id="cartLink">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a> </li>
             </ul>
             
         </div>
@@ -79,7 +82,7 @@ body {
 
     </section>
 
-    <section id="product1" class="section-p1">
+    <!-- <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Latest Edition</p>
 
@@ -97,7 +100,7 @@ body {
 
     <div class="containers" id="featuredContainer">
         
-        <!-- <div class="pro">
+        <div class="pro">
             <div class="img_container">
             <img src="images/iphone/iPhone 12 Mini - White - Portrait.png">
             </div>
@@ -278,29 +281,34 @@ body {
                     </div>
                         <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-            </div> -->
+            </div>
     </div>
-    </section>
+    </section> -->
 
-    <section id="banner" class="section-p1">
-        <h4>Repair Services</h4>
-        <h2><span>Up to 70% Off</span> - All Devices and Accessories</h2>
-        <button id="bannerButton" onclick="bannerButton()" >Explore more</button>
-    </section>
+
 
     <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
+        <h2>Our products</h2>
         <p>Latest Edition</p>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchBar" placeholder="Search..." />
+        </div>
+        
 
         <div class="sortContainer">
             <label for="sortOptions">Sort by:</label>
             <select class="sort" id="sortOptions">
+                <option value="yearDown">Newest</option>
+                <option value="yearUp">Oldest</option>
                 <option value="nameAZ">Name A->Z</option>
                 <option value="nameZA">Name Z->A</option>
                 <option value="priceUp">Price Low->High</option>
                 <option value="priceDown">Price High->Low</option>
-                <option value="ratingUp">Rating Low->High</option>
-                <option value="ratingDown">Rating High->Low</option>
+                <option value="ratingDown">Best rated</option>
+                <option value="ratingUp">Lowest rated</option>
+
             </select>
         </div>
 
@@ -491,6 +499,12 @@ body {
     </div>
     </section>
 
+    <section id="banner" class="section-p1">
+        <h4>Repair Services</h4>
+        <h2><span>Up to 70% Off</span> - All Devices and Accessories</h2>
+        <button id="bannerButton" onclick="bannerButton()" >Explore more</button>
+    </section>
+
     <section id="sm-banner" class="section-p1">
         <div class="banner-box">
             <h4>Crazy deals</h4>
@@ -608,7 +622,13 @@ body {
           <h1>Cart</h1>
           <p>...</p>
         </div>
-      </div>
+    </div>
+
+      <!-- <div id="modalConfirm" class="confirmation-message">
+        <div class="modal-confirm-content">
+          <p>...</p>
+        </div>
+      </div> -->
 
     <!-- -- -->
 

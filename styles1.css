@@ -89,6 +89,25 @@ button:hover {
     border-radius: 4px;
 }
 
+.search {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+}
+
+#searchBar {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border-color: var(--nav-color);
+    font-family: "SF Pro", sans-serif;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    min-width: 30%;
+    border: 2px;
+}
+
 /* Header Start */
 
 #header {
@@ -550,11 +569,36 @@ bottom {
   transition: opacity 0.3s ease;
 }
 
+.confirmation-message {
+    background-color: var(--nav-color);
+    width: fit-content;
+    padding: 32px;
+    position: fixed;
+    top: 50%;                       /* Центр по вертикали */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  transition: opacity 0.9s ease;
+}
+
 .close {
     display: flex;
     justify-content: end;
     cursor: pointer;
 }
+
+.cart-count {
+    position: absolute; /* Абсолютное позиционирование для счётчика */
+    top: -5px; /* Поднимите его чуть выше, изменяйте значение при необходимости */
+    right: -10px; /* Сдвиньте его вправо, изменяйте значение при необходимости */
+    background-color: var(--background-color);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; /* По умолчанию скрыто */
+  }
 
 /* Затемнение фона при открытом модальном окне */
 .modal-cart.show {
