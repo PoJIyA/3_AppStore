@@ -9,7 +9,7 @@ function heroButton() {
   }
 
   function upButton() {
-    const up = document.getElementById("header");
+    const up = document.getElementById("hero");
     up.scrollIntoView();
   }
 
