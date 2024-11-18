@@ -106,6 +106,8 @@ const addProducts = function() {
   });
 };
 
+products.sort((a,b) => b.year - a.year);
+
 // NEW sorting Fuction 
 function sortProducts(criteria) {
   let sortedProducts = [
